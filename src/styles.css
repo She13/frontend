@@ -3,9 +3,13 @@
     padding: 0;
   }
 .box {
-    margin: 30px
+    margin: 30px;
 }
 button {
     margin: 5px;
-    text-align: center
+    text-align: center;
+}
+h1 {
+    margin: 15px;
+    padding-bottom: 15px;
 }

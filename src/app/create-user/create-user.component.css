@@ -1,0 +1,22 @@
+.requerido {
+    color: red;
+    font-weight: bold;
+}
+.formulario {
+    margin: 0 auto;
+    width: 70%;
+}
+.centrado {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.centradoVert
+{
+    display: table-cell;
+    vertical-align: middle
+}
+.btn-guardar {
+    cursor: pointer;
+    font-weight: bold;
+}

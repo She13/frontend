@@ -1,6 +1,15 @@
 <div class="box">
-  <button type="button" [routerLink]="['/userComponent']" routerLinkActive="router-link-active"  class="btn btn-primary">Ver usuarios</button>
-  <button type="button" class="btn btn-success">Agregar usuario</button>
+  <button type="button" 
+          [routerLink]="['/userComponent']" 
+          routerLinkActive="router-link-active"  
+          class="btn btn-primary">
+    Ver usuarios
+  </button>
+  <button type="button" 
+          [routerLink]="['/createUserComponent']" 
+          class="btn btn-success">
+    Agregar usuario
+  </button>
 </div>
 
 <router-outlet></router-outlet>
