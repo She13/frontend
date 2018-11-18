@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from "@angular/router";
 import { UserModel } from './../model/user.model';
 import { UserService } from './user.service';
 
@@ -11,7 +11,8 @@ import { UserService } from './user.service';
   })
   export class UserComponent implements OnInit {
   private users: Array<UserModel>;
-  constructor(private UserService: UserService) { }
+  constructor(private UserService: UserService,
+              private router: Router ) { }
 
   ngOnInit() { 
     this.loadUsers();
@@ -22,5 +23,14 @@ import { UserService } from './user.service';
       this.users = res;
       //console.log(res);
     });
+  }
+
+  public edit(user: UserModel):void {
+    sessionStorage.setItem('user', JSON.stringify(user));
+    this.router.navigate(['/createUserComponent']);
+  }
+
+  public delete(user: UserModel):void {
+    this.UserService.delete(user);
   }
 }

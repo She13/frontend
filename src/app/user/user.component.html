@@ -8,6 +8,7 @@
       <th scope="col">Apellido 2</th>
       <th scope="col">Tlf.</th>
       <th scope="col">Dirección</th>
+      <th scope="col">Acción</th>
     </tr>
   </thead>
   <tbody>
@@ -18,6 +19,16 @@
       <td>{{user.secondSurname}}</td>
       <td>{{user.phone}}</td>
       <td>{{user.address}}</td>
+      <td>
+        <img src="..\..\assets\edit.png" 
+               class="icon" 
+               alt="edit"
+               (click)="edit(user)">
+        <img src="..\..\assets\remove.png" 
+              class="icon" 
+              alt="edit"
+              (click)="delete(user)">
+      </td>
     </tr>
   </tbody>
 </table>
